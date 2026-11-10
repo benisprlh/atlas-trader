@@ -1,0 +1,181 @@
+{
+  "capturedAt": "2026-11-10T01:32:48.327596+00:00",
+  "sessionId": "35c81bc0-26c6-4174-8b3e-e4e416e22767",
+  "checks": {
+    "session_matches": true,
+    "config_matches": true,
+    "reviewed_configuration_matches_prior": true,
+    "owner_private_verified": true,
+    "hourly_marks_contiguous": true,
+    "prior_marks_unchanged": true,
+    "prior_marks_retained": true,
+    "equity_cash_flat_reconciliation": true,
+    "closed_trade_counter_matches_empty_history": true,
+    "no_drawdown_breach_observed": true,
+    "no_exposure_breach_observed": true
+  },
+  "configurationSha256": "4f811bb1291f2cb5c01f30585d8356ac495da08a4fc31eee77f14169718b22cc",
+  "counts": {
+    "equity": 94,
+    "events": 95,
+    "trades": 0,
+    "newEquity": 24,
+    "newEvents": 24
+  },
+  "duplicatesRemoved": {
+    "equity": 0,
+    "events": 0,
+    "trades": 0
+  },
+  "windowOperational": {
+    "start": "2026-11-09T01:32:48.327596+00:00",
+    "end": "2026-11-10T01:32:48.327596+00:00",
+    "events": 24,
+    "types": {
+      "cycle": 22,
+      "error": 2
+    },
+    "actions": {
+      "EXIT": 22
+    }
+  },
+  "windowMarks": {
+    "start": {
+      "time": 1794182400000,
+      "equity": 10000,
+      "benchmark": 9590.923546195225,
+      "drawdownPct": 0
+    },
+    "end": {
+      "time": 1794268800000,
+      "equity": 10000,
+      "benchmark": 9510.926771149203,
+      "drawdownPct": 0
+    },
+    "hours": 24
+  },
+  "pnlNetSimulated24h": 0,
+  "pnlNetSimulatedCumulative": 0,
+  "return24hPct": 0.0,
+  "returnCumulativePct": 0.0,
+  "realizedPnl": 0,
+  "unrealizedPnl": 0,
+  "feesSimulated": 0,
+  "apiCost": null,
+  "pnlAllCosts": null,
+  "closedTrades": 0,
+  "winRate": null,
+  "maxDrawdownPctFromCurve": 0,
+  "cash": 10000,
+  "quantity": 0,
+  "exposureUsd": 0,
+  "benchmark": {
+    "first": {
+      "time": 1793934000000,
+      "equity": 10000,
+      "benchmark": 10000,
+      "drawdownPct": 0
+    },
+    "last": {
+      "time": 1794268800000,
+      "equity": 10000,
+      "benchmark": 9510.926771149203,
+      "drawdownPct": 0
+    },
+    "delta24h": -79.99677504602187,
+    "return24hPct": -0.8340883405097865,
+    "cumulativePnl": -489.073228850797,
+    "cumulativePct": -4.890732288507971,
+    "enrollmentLast": {
+      "time": 1793944800000,
+      "equity": 10000,
+      "benchmark": 9966.809848651115,
+      "drawdownPct": 0
+    },
+    "returnSinceEnrollmentLastMarkPct": -4.574011990041226,
+    "cashReturnAssumptionNoInterestPct": 0
+  },
+  "heartbeatAgeMinutes": 24.555709933333333,
+  "feedFetchAgeMinutes": 24.555193266666667,
+  "heartbeatAdvancedVsPrior": true,
+  "sessionError": null,
+  "modelReviewStatus": "completed",
+  "modelReviewErrorFieldPresent": false,
+  "modelReviewError": null,
+  "recoveries24h": [
+    {
+      "error": {
+        "id": "33cb6821-fd90-4469-9c23-6702b89cac67",
+        "time": "2026-11-09T06:05:56.631Z",
+        "type": "error",
+        "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+      },
+      "nextSuccess": "2026-11-09T07:03:54.326Z"
+    },
+    {
+      "error": {
+        "id": "51e05c97-f231-4432-a8d4-5bd837acf295",
+        "time": "2026-11-09T21:06:47.197Z",
+        "type": "error",
+        "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+      },
+      "nextSuccess": "2026-11-09T22:08:30.820Z"
+    }
+  ],
+  "successfulCycleGapsOver90Minutes": [
+    {
+      "previous": "2026-11-06T10:05:22.909Z",
+      "next": "2026-11-06T13:11:02.936Z",
+      "minutes": 185.66711666666666
+    },
+    {
+      "previous": "2026-11-06T23:10:58.757Z",
+      "next": "2026-11-07T01:03:00.860Z",
+      "minutes": 112.03505
+    },
+    {
+      "previous": "2026-11-08T07:09:32.567Z",
+      "next": "2026-11-08T09:10:36.108Z",
+      "minutes": 121.05901666666666
+    },
+    {
+      "previous": "2026-11-09T05:02:12.753Z",
+      "next": "2026-11-09T07:03:54.326Z",
+      "minutes": 121.69288333333334
+    },
+    {
+      "previous": "2026-11-09T20:05:16.296Z",
+      "next": "2026-11-09T22:08:30.820Z",
+      "minutes": 123.24206666666667
+    }
+  ],
+  "costStressFixedNotional1500": [
+    {
+      "feeBps": 10,
+      "slippageBps": 10,
+      "roundtripCostUsd": 6.0
+    },
+    {
+      "feeBps": 40,
+      "slippageBps": 10,
+      "roundtripCostUsd": 15.0
+    },
+    {
+      "feeBps": 80,
+      "slippageBps": 10,
+      "roundtripCostUsd": 27.0
+    },
+    {
+      "feeBps": 80,
+      "slippageBps": 25,
+      "roundtripCostUsd": 31.5
+    }
+  ],
+  "oldBacktestsExcluded": 3,
+  "limitations": [
+    "No raw OHLC payload or arrival log: candle finality and full feed availability unverified.",
+    "No fill/position history with trades: stops/execution controls untested.",
+    "Only latest AI review retained; no complete hourly AI archive.",
+    "Cash baseline assumes no interest; buy-and-hold is dashboard price proxy, fee handling unverified."
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-06T07:34:31.833231+00:00",
+  "projectId": "appgprj_6aed4a5250108191b0d69f3ba8542885",
+  "purpose": "Enrollment baseline for daily evaluation; original paper session remains authoritative",
+  "monitoringWindow": {
+    "startDate": "2026-11-06",
+    "reviewDate": "2026-12-06",
+    "timezone": "Asia/Jakarta"
+  },
+  "sessionId": "35c81bc0-26c6-4174-8b3e-e4e416e22767",
+  "configurationSha256": "4f811bb1291f2cb5c01f30585d8356ac495da08a4fc31eee77f14169718b22cc",
+  "session": {
+    "id": "35c81bc0-26c6-4174-8b3e-e4e416e22767",
+    "status": "running",
+    "symbol": "ETH",
+    "config": {
+      "fastPeriod": 12,
+      "slowPeriod": 36,
+      "feeBps": 10,
+      "slippageBps": 10,
+      "initialCash": 10000,
+      "maxPositionPct": 15,
+      "stopLossPct": 3,
+      "maxDrawdownPct": 8
+    },
+    "paperState": {
+      "cash": 10000,
+      "quantity": 0,
+      "entryPrice": 0,
+      "positionCost": 0,
+      "equity": 10000,
+      "peakEquity": 10000,
+      "maxDrawdownPct": 0,
+      "totalFees": 0,
+      "realizedPnl": 0,
+      "closedTrades": 0,
+      "wins": 0,
+      "halted": false,
+      "lastProcessedTime": 1793944800000,
+      "pendingAction": "EXIT",
+      "pendingReason": "Fast moving average is below slow average; exit candidate.",
+      "pendingCompletedAt": 1793948639105,
+      "pendingExpiresAt": 1793959439105,
+      "candleIntervalMs": 3600000,
+      "benchmarkQuantity": 4.479102746137893,
+      "benchmarkCash": 0,
+      "trades": [],
+      "equityCurve": [
+        {
+          "time": 1793934000000,
+          "equity": 10000,
+          "benchmark": 10000,
+          "drawdownPct": 0
+        },
+        {
+          "time": 1793937600000,
+          "equity": 10000,
+          "benchmark": 9990.952212452801,
+          "drawdownPct": 0
+        },
+        {
+          "time": 1793941200000,
+          "equity": 10000,
+          "benchmark": 9955.522509730848,
+          "drawdownPct": 0
+        },
+        {
+          "time": 1793944800000,
+          "equity": 10000,
+          "benchmark": 9966.809848651115,
+          "drawdownPct": 0
+        }
+      ],
+      "latestDecision": {
+        "engine": "rules",
+        "asOf": 1793948400000,
+        "action": "EXIT",
+        "reason": "Fast moving average is below slow average; exit candidate.",
+        "confidence": null,
+        "agents": [
+          {
+            "role": "Research / Context",
+            "engine": "rules",
+            "status": "ready",
+            "action": "EXIT",
+            "summary": "Closed-candle trend and momentum assessment. No news or LLM inference was used.",
+            "evidence": [
+              "SMA 12: 2235.36",
+              "SMA 36: 2336.10",
+              "Trend spread: -4.31%"
+            ]
+          },
+          {
+            "role": "Challenger",
+            "engine": "rules",
+            "status": "warning",
+            "action": "EXIT",
+            "summary": "A trend signal can fail in sideways markets. Fees, execution assumptions and concentration remain relevant.",
+            "evidence": [
+              "Per-bar volatility: 0.93%",
+              "Position cap: 15%",
+              "Rule-based review; not an independent AI opinion."
+            ]
+          },
+          {
+            "role": "Decision Synthesizer",
+            "engine": "rules",
+            "status": "ready",
+            "action": "EXIT",
+            "summary": "Fast moving average is below slow average; exit candidate.",
+            "evidence": [
+              "Proposal only; deterministic risk checks still apply.",
+              "No calibrated probability of profit is asserted."
+            ]
+          }
+        ],
+        "indicators": {
+          "fastSma": 2235.355,
+          "slowSma": 2336.0966666666673,
+          "momentumPct": -7.831799391946204,
+          "volatilityPct": 0.9343023532499977
+        }
+      },
+      "status": "ready"
+    },
+    "lastTick": "2026-11-06T07:27:02.901Z",
+    "source": {
+      "kind": "live",
+      "label": "Kraken spot USD · live price proxy",
+      "asOf": "2026-11-06T07:00:00.000Z",
+      "fetchedAt": "2026-11-06T07:27:03.090Z",
+      "timeframe": "1h",
+      "executionModel": "CEX candle proxy; not a DEX fill, gas or liquidity simulation"
+    },
+    "error": null,
+    "createdAt": "2026-11-06T04:01:20.793Z",
+    "mode": "paper",
+    "historyRetention": {
+      "maxEvents": 2000,
+      "retained": "latest",
+      "lifetimeCounters": true
+    },
+    "modelReview": {
+      "configured": true,
+      "engine": "llm",
+      "status": "completed",
+      "analysis": {
+        "engine": "llm",
+        "asOf": 1793948400000,
+        "action": "EXIT",
+        "reason": "Pertahankan rekomendasi keluar karena harga berada di bawah rata-rata bergerak, tren melemah, dan momentum negatif. Kritik tentang keterbatasan konteks tidak membatalkan sinyal keluar yang tersedia.",
+        "confidence": null,
+        "agents": [
+          {
+            "role": "Research",
+            "engine": "llm",
+            "status": "completed",
+            "action": "EXIT",
+            "summary": "Pola rata-rata bergerak dan momentum negatif mendukung keluar. Bukti terbatas pada indikator harga dan tidak memastikan kelanjutan tren.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2225.18",
+              "Fast SMA: 2235.355",
+              "Slow SMA: 2336.0966666666673",
+              "24-hour momentum percent: -7.831799391946204"
+            ]
+          },
+          {
+            "role": "Challenger",
+            "engine": "llm",
+            "status": "completed",
+            "action": "HOLD",
+            "summary": "Tren dan momentum melemah, tetapi indikator berbasis harga ini bukan konfirmasi independen. Status posisi dan konteks pasar tidak tersedia, sehingga rekomendasi keluar belum cukup teruji.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2225.18",
+              "Fast SMA: 2235.355",
+              "Slow SMA: 2336.0966666666673",
+              "24-hour momentum percent: -7.831799391946204"
+            ]
+          },
+          {
+            "role": "Synthesizer",
+            "engine": "llm",
+            "status": "completed",
+            "action": "EXIT",
+            "summary": "Pertahankan rekomendasi keluar karena harga berada di bawah rata-rata bergerak, tren melemah, dan momentum negatif. Kritik tentang keterbatasan konteks tidak membatalkan sinyal keluar yang tersedia.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2225.18",
+              "Fast SMA: 2235.355",
+              "Slow SMA: 2336.0966666666673",
+              "24-hour momentum percent: -7.831799391946204"
+            ]
+          }
+        ],
+        "indicators": {
+          "fastSma": 2235.355,
+          "slowSma": 2336.0966666666673,
+          "momentumPct": -7.831799391946204,
+          "volatilityPct": 0.9343023532499977
+        }
+      },
+      "reviews": [
+        {
+          "role": "Research",
+          "engine": "llm",
+          "status": "completed",
+          "action": "EXIT",
+          "summary": "Pola rata-rata bergerak dan momentum negatif mendukung keluar. Bukti terbatas pada indikator harga dan tidak memastikan kelanjutan tren.",
+          "evidenceIds": [
+            "close",
+            "fast_sma",
+            "slow_sma",
+            "momentum"
+          ],
+          "evidence": [
+            "Latest closed candle USD: 2225.18",
+            "Fast SMA: 2235.355",
+            "Slow SMA: 2336.0966666666673",
+            "24-hour momentum percent: -7.831799391946204"
+          ]
+        },
+        {
+          "role": "Challenger",
+          "engine": "llm",
+          "status": "completed",
+          "action": "HOLD",
+          "summary": "Tren dan momentum melemah, tetapi indikator berbasis harga ini bukan konfirmasi independen. Status posisi dan konteks pasar tidak tersedia, sehingga rekomendasi keluar belum cukup teruji.",
+          "evidenceIds": [
+            "close",
+            "fast_sma",
+            "slow_sma",
+            "momentum"
+          ],
+          "evidence": [
+            "Latest closed candle USD: 2225.18",
+            "Fast SMA: 2235.355",
+            "Slow SMA: 2336.0966666666673",
+            "24-hour momentum percent: -7.831799391946204"
+          ]
+        },
+        {
+          "role": "Synthesizer",
+          "engine": "llm",
+          "status": "completed",
+          "action": "EXIT",
+          "summary": "Pertahankan rekomendasi keluar karena harga berada di bawah rata-rata bergerak, tren melemah, dan momentum negatif. Kritik tentang keterbatasan konteks tidak membatalkan sinyal keluar yang tersedia.",
+          "evidenceIds": [
+            "close",
+            "fast_sma",
+            "slow_sma",
+            "momentum"
+          ],
+          "evidence": [
+            "Latest closed candle USD: 2225.18",
+            "Fast SMA: 2235.355",
+            "Slow SMA: 2336.0966666666673",
+            "24-hour momentum percent: -7.831799391946204"
+          ]
+        }
+      ],
+      "provider": "OpenAI",
+      "model": "gpt-6.1-sol",
+      "inputTokens": 1245,
+      "outputTokens": 654,
+      "durationMs": 19228
+    },
+    "reviewedPendingAt": 1793948639105,
+    "agents": {
+      "engine": "llm",
+      "asOf": 1793948400000,
+      "action": "EXIT",
+      "reason": "Pertahankan rekomendasi keluar karena harga berada di bawah rata-rata bergerak, tren melemah, dan momentum negatif. Kritik tentang keterbatasan konteks tidak membatalkan sinyal keluar yang tersedia.",
+      "confidence": null,
+      "agents": [
+        {
+          "role": "Research",
+          "engine": "llm",
+          "status": "completed",
+          "action": "EXIT",
+          "summary": "Pola rata-rata bergerak dan momentum negatif mendukung keluar. Bukti terbatas pada indikator harga dan tidak memastikan kelanjutan tren.",
+          "evidenceIds": [
+            "close",
+            "fast_sma",
+            "slow_sma",
+            "momentum"
+          ],
+          "evidence": [
+            "Latest closed candle USD: 2225.18",
+            "Fast SMA: 2235.355",
+            "Slow SMA: 2336.0966666666673",
+            "24-hour momentum percent: -7.831799391946204"
+          ]
+        },
+        {
+          "role": "Challenger",
+          "engine": "llm",
+          "status": "completed",
+          "action": "HOLD",
+          "summary": "Tren dan momentum melemah, tetapi indikator berbasis harga ini bukan konfirmasi independen. Status posisi dan konteks pasar tidak tersedia, sehingga rekomendasi keluar belum cukup teruji.",
+          "evidenceIds": [
+            "close",
+            "fast_sma",
+            "slow_sma",
+            "momentum"
+          ],
+          "evidence": [
+            "Latest closed candle USD: 2225.18",
+            "Fast SMA: 2235.355",
+            "Slow SMA: 2336.0966666666673",
+            "24-hour momentum percent: -7.831799391946204"
+          ]
+        },
+        {
+          "role": "Synthesizer",
+          "engine": "llm",
+          "status": "completed",
+          "action": "EXIT",
+          "summary": "Pertahankan rekomendasi keluar karena harga berada di bawah rata-rata bergerak, tren melemah, dan momentum negatif. Kritik tentang keterbatasan konteks tidak membatalkan sinyal keluar yang tersedia.",
+          "evidenceIds": [
+            "close",
+            "fast_sma",
+            "slow_sma",
+            "momentum"
+          ],
+          "evidence": [
+            "Latest closed candle USD: 2225.18",
+            "Fast SMA: 2235.355",
+            "Slow SMA: 2336.0966666666673",
+            "24-hour momentum percent: -7.831799391946204"
+          ]
+        }
+      ],
+      "indicators": {
+        "fastSma": 2235.355,
+        "slowSma": 2336.0966666666673,
+        "momentumPct": -7.831799391946204,
+        "volatilityPct": 0.9343023532499977
+      }
+    },
+    "reviewedConfiguration": "responses-v2|https://api.openai.com/v1/responses|gpt-6.1-sol"
+  },
+  "events": [
+    {
+      "id": "75acede6-d2a8-4a66-9481-4a058adcf5ec",
+      "time": "2026-11-06T07:04:18.333Z",
+      "type": "cycle",
+      "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+    },
+    {
+      "id": "064108e7-0e50-4da5-9851-d1a5aa771352",
+      "time": "2026-11-06T06:58:25.745Z",
+      "type": "ai_configuration",
+      "message": "Konfigurasi AI diterapkan pada sesi paper yang sedang berjalan."
+    },
+    {
+      "id": "99ac1ceb-1dbc-4515-9464-be5b64dc164e",
+      "time": "2026-11-06T06:54:48.826Z",
+      "type": "ai_configuration",
+      "message": "Konfigurasi AI diterapkan pada sesi paper yang sedang berjalan."
+    },
+    {
+      "id": "88f9d895-09fa-4ea6-9075-5b9a60132e3f",
+      "time": "2026-11-06T06:04:06.065Z",
+      "type": "cycle",
+      "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+    },
+    {
+      "id": "de36a449-51a8-4708-9563-4901b22ac1a2",
+      "time": "2026-11-06T05:02:48.303Z",
+      "type": "cycle",
+      "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+    },
+    {
+      "id": "aed595ca-5bd3-4535-8488-1f16e213b94c",
+      "time": "2026-11-06T04:03:02.418Z",
+      "type": "schedule",
+      "message": "Scheduler paper terhubung. Hanya memproses sesi paper yang running."
+    },
+    {
+      "id": "13be108b-4afc-444f-8bd4-b510ab60af3c",
+      "time": "2026-11-06T04:01:20.952Z",
+      "type": "start",
+      "message": "Auto paper dimulai pada data baru. Histori hanya untuk warm-up; tidak ada trade historis yang ditambahkan."
+    }
+  ],
+  "schedule": {
+    "status": "connected",
+    "lastHeartbeat": "2026-11-06T07:03:58.946Z",
+    "taskId": "Automation_409fc53a8f888191a2c51ddd15e3cc7a"
+  },
+  "capabilities": {
+    "llmConfigured": true,
+    "scheduler": "connected",
+    "liveTrading": false,
+    "wallet": "EVM read-only",
+    "delegation": "draft-only"
+  }
+}

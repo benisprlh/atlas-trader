@@ -1,0 +1,19 @@
+[Unit]
+Description=Atlas isolated PAPER scalper
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=atlas
+WorkingDirectory=/opt/atlas-scalper
+Environment=SCALPER_DATA=/var/lib/atlas-scalper
+ExecStart=/usr/bin/node /opt/atlas-scalper/runner.mjs
+Restart=on-failure
+RestartSec=10
+StateDirectory=atlas-scalper
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target

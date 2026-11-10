@@ -1,0 +1,20 @@
+{
+  "sourceCommit": "9c04aa94b8b543799b0a08713ee1e1b34b5627bc",
+  "publicRepositoryAuthorized": "2026-11-10",
+  "siteAudience": "owner-private",
+  "deployed": false,
+  "snapshotFiles": [
+    {
+      "dateWIB": "2026-11-06",
+      "originalFilename": "Atlas_Trader_Snapshot_2026-11-06_Enrollment.json"
+    },
+    {
+      "dateWIB": "2026-11-09",
+      "originalFilename": "Atlas_Trader_Snapshot_2026-11-09_35c81bc0-26c6-4174-8b3e-e4e416e22767.json"
+    },
+    {
+      "dateWIB": "2026-11-10",
+      "originalFilename": "Atlas_Trader_Snapshot_2026-11-10_35c81bc0-26c6-4174-8b3e-e4e416e22767.json"
+    }
+  ]
+}

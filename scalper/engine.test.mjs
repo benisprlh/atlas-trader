@@ -1,0 +1,15 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {defaults,config,initial,step} from './engine.mjs';
+const now=1320000;
+const bars=Array.from({length:21},(_,i)=>({time:(i+1)*60000,open:100+i*.1,close:100+i*.1,high:101+i*.1,low:99+i*.1}));
+bars[20]={time:1260000,open:102,high:106,low:101,close:105};
+const input={now,bars,bid:105,ask:105.01,quoteAt:now};
+test('enter after signal at current ask with fee, capped budget; preserve input',()=>{const s=initial(),out=step(s,input);assert.equal(out.reason,'ENTER');assert.equal(s.qty,0);assert.equal(out.events.length,1);assert.equal(out.state.cost,1000);assert.ok(out.events[0].price>input.ask);assert.ok(out.state.fees>0);assert.ok(out.state.equity<10000)});
+test('stop realizes round-trip fees and no duplicate sell on restart',()=>{let buy=step(initial(),input);let out=step(buy.state,{...input,now:now+15000,quoteAt:now+15000,bid:103,ask:103.01});assert.equal(out.reason,'STOP');assert.equal(out.state.qty,0);assert.equal(out.state.closed,1);assert.ok(out.state.realized<0);assert.ok(Math.abs(out.state.cash-10000-out.state.realized)<1e-8);let again=step(JSON.parse(JSON.stringify(out.state)),{...input,now:now+15000,quoteAt:now+15000});assert.equal(again.events.length,0)});
+test('time exit still works if candle feed fails',()=>{let s=step(initial(),input).state;let out=step(s,{...input,bars:[],now:now+300001,quoteAt:now+300001});assert.equal(out.reason,'TIME_EXIT');assert.equal(out.state.closed,1)});
+test('stale quotes do not fabricate exits or marks',()=>{let s=step(initial(),input).state;let out=step(s,{...input,now:now+300000});assert.match(out.reason,/DATA_BLOCK/);assert.deepEqual(out.state,s)});
+test('unfinished bars, gaps, duplicate timestamps and excessive spread blocked',()=>{for(const b of [[...bars.slice(0,-1),{...bars.at(-1),time:now}],bars.map((b,i)=>i===10?{...b,time:b.time-1}:b)])assert.equal(step(initial(),{...input,bars:b}).reason,'CANDLE_BLOCK');assert.equal(step(initial(),{...input,ask:110}).reason,'SPREAD_BLOCK')});
+test('cost filter is binding; aggressive trade request cannot bypass it',()=>{const out=step(initial(),input,config({feeBps:500}));assert.equal(out.reason,'COST_BLOCK');assert.equal(out.events.length,0)});
+test('no re-entry on processed candle, daily cap and drawdown halt',()=>{let s=initial();s.lastBar=bars.at(-1).time;assert.equal(step(s,input).reason,'SAME_CANDLE');s=initial();s.day=new Date(now).toISOString().slice(0,10);s.entries=30;assert.equal(step(s,input).reason,'COOLDOWN_OR_LIMIT');s=initial();s.cash=9500;const out=step(s,input);assert.equal(out.reason,'RISK_BLOCK');assert.equal(out.state.halted,true)});
+test('invalid config rejected',()=>{for(const x of [{feeBps:NaN},{maxPositionPct:100},{maxEntriesPerDay:1.5},{unknown:1}])assert.throws(()=>config(x))});
+test('target exits and state can be serialized/restored',()=>{const s=JSON.parse(JSON.stringify(step(initial(),input).state));const out=step(s,{...input,now:now+15000,quoteAt:now+15000,bid:s.target+.1,ask:s.target+.11});assert.equal(out.reason,'TARGET');assert.equal(out.state.closed,1);assert.equal(out.state.wins,1)});

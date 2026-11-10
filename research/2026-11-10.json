@@ -1,0 +1,119 @@
+{
+  "dateWIB": "2026-11-10",
+  "sessionId": "35c81bc0-26c6-4174-8b3e-e4e416e22767",
+  "mainSessionModified": false,
+  "candidates": [
+    {
+      "id": "AT-20261107-01",
+      "name": "Cost-aware entry",
+      "origin": "Carried from 2026-11-09 report; not a new candidate",
+      "hypothesis": "Entry net edge filter reduces trading losses after realistic fees",
+      "status": "profitability_backtest_not_run",
+      "promoted": false,
+      "performed": "fixed-notional sensitivity arithmetic only",
+      "result": [
+        {
+          "feeBps": 10,
+          "slippageBps": 10,
+          "roundtripCostUsd": 6.0
+        },
+        {
+          "feeBps": 40,
+          "slippageBps": 10,
+          "roundtripCostUsd": 15.0
+        },
+        {
+          "feeBps": 80,
+          "slippageBps": 10,
+          "roundtripCostUsd": 27.0
+        },
+        {
+          "feeBps": 80,
+          "slippageBps": 25,
+          "roundtripCostUsd": 31.5
+        }
+      ],
+      "source": "https://www.kraken.com/features/fee-schedule",
+      "benefit": "Avoid turnover without net edge",
+      "risk": "Missed trends, erroneous forecasts and optimistic maker fills",
+      "passCriteria": "180+ days ETH/USD 1h, rolling train90/test30 >=3 folds; warmup36; fills after decision; >=30 closed OOS trades; median net improvement>0; positive net at 80+25bps stress; DD<=8%; exposure<=15%; report uncertainty and all folds; API ledger for all-cost claim",
+      "missing": [
+        "verified OHLCV dataset and manifest",
+        "source engine",
+        "account fee tier and spread/slippage observations",
+        "API cost ledger"
+      ]
+    },
+    {
+      "id": "AT-20261107-02",
+      "name": "Candle finality and timing replay",
+      "origin": "Carried from 2026-11-09 report; not a new candidate",
+      "hypothesis": "Final candles and explicit timing reduce leakage and replay mismatch",
+      "status": "partial_data_audit_only_replay_not_run",
+      "promoted": false,
+      "performed": "11 data checks on copied snapshots, deduplication and timing-gap audit",
+      "result": {
+        "checks": {
+          "session_matches": true,
+          "config_matches": true,
+          "reviewed_configuration_matches_prior": true,
+          "owner_private_verified": true,
+          "hourly_marks_contiguous": true,
+          "prior_marks_unchanged": true,
+          "prior_marks_retained": true,
+          "equity_cash_flat_reconciliation": true,
+          "closed_trade_counter_matches_empty_history": true,
+          "no_drawdown_breach_observed": true,
+          "no_exposure_breach_observed": true
+        },
+        "duplicates": {
+          "equity": 0,
+          "events": 0,
+          "trades": 0
+        },
+        "uninterrupted_cycles_claim": "rejected",
+        "recentErrors": [
+          {
+            "error": {
+              "id": "33cb6821-fd90-4469-9c23-6702b89cac67",
+              "time": "2026-11-09T06:05:56.631Z",
+              "type": "error",
+              "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+            },
+            "nextSuccess": "2026-11-09T07:03:54.326Z"
+          },
+          {
+            "error": {
+              "id": "51e05c97-f231-4432-a8d4-5bd837acf295",
+              "time": "2026-11-09T21:06:47.197Z",
+              "type": "error",
+              "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+            },
+            "nextSuccess": "2026-11-09T22:08:30.820Z"
+          }
+        ]
+      },
+      "sources": [
+        "https://docs.kraken.com/api-reference/market-data/get-ohlc-data",
+        "https://support.kraken.com/articles/360047124832-downloadable-historical-ohlcvt-open-high-low-close-volume-trades-data"
+      ],
+      "benefit": "Reproducible measurements without look-ahead",
+      "risk": "Latency, historical arrival assumptions, data gaps",
+      "passCriteria": "100% decisions use already-final and received candles; fill after decision; no duplicate timestamps, lookahead or synthetic bars; evidence-labeled gaps; last30days untouched holdout; cost model from candidate01; report netPnL/DD/exposure/opportunity cost",
+      "missing": [
+        "raw OHLC responses with receivedAt/closedAt",
+        "decision and fill ledger",
+        "source adapter and engine",
+        "verified long OHLCV dataset"
+      ]
+    }
+  ],
+  "allCandidatesEvaluatedThisRunLogged": true,
+  "priorRejectedEvidenceRetained": "Previous no-interruption claim failed; reiterated with two new >120-minute gaps. No failed candidate was removed.",
+  "artifactHashes": {
+    "Atlas_Trader_Evaluasi_2026-11-10_35c81bc0-26c6-4174-8b3e-e4e416e22767.md": "7d62a4868b29ccd5dd16be69e52a68b2fd8dc628db6db5800009ea6814f5bc1f",
+    "Atlas_Trader_Audit_2026-11-10.py": "443091367f0164de101ca47482b2350e0f9a16c76c2657fae16ef9610c093058",
+    "Atlas_Trader_Snapshot_2026-11-10_35c81bc0-26c6-4174-8b3e-e4e416e22767.json": "2d6fd8dc302196427ffc6d6a2b63305254f56708cf88a950ff974c9d44cab56d",
+    "Atlas_Trader_Audit_Result_2026-11-10.json": "0baa634808bb2c2c4f0024beaf2c3b75a7d73d83c725fcab7a94a6e42c2aaa2b"
+  }
+}
