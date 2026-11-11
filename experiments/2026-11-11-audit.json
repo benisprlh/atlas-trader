@@ -1,0 +1,225 @@
+{
+  "capturedAt": "2026-11-11T01:28:35.258787+00:00",
+  "sessionId": "35c81bc0-26c6-4174-8b3e-e4e416e22767",
+  "checks": {
+    "session_matches": true,
+    "config_matches": true,
+    "reviewed_configuration_matches_prior": true,
+    "owner_private_verified": true,
+    "hourly_marks_contiguous": true,
+    "prior_marks_unchanged": true,
+    "prior_marks_retained": true,
+    "equity_cash_flat_reconciliation": true,
+    "closed_trade_counter_matches_empty_history": true,
+    "no_drawdown_breach_observed": true,
+    "no_exposure_breach_observed": true
+  },
+  "configurationSha256": "4f811bb1291f2cb5c01f30585d8356ac495da08a4fc31eee77f14169718b22cc",
+  "counts": {
+    "equity": 118,
+    "events": 119,
+    "trades": 0,
+    "newEquity": 24,
+    "newEvents": 24
+  },
+  "duplicatesRemoved": {
+    "equity": 0,
+    "events": 0,
+    "trades": 0
+  },
+  "windowOperational": {
+    "start": "2026-11-10T01:28:35.258787+00:00",
+    "end": "2026-11-11T01:28:35.258787+00:00",
+    "events": 24,
+    "types": {
+      "cycle": 24
+    },
+    "actions": {
+      "EXIT": 23,
+      "HOLD": 1
+    }
+  },
+  "windowMarks": {
+    "start": {
+      "time": 1794268800000,
+      "equity": 10000,
+      "benchmark": 9510.926771149203,
+      "drawdownPct": 0
+    },
+    "end": {
+      "time": 1794355200000,
+      "equity": 10000,
+      "benchmark": 9169.753514975879,
+      "drawdownPct": 0
+    },
+    "hours": 24
+  },
+  "pnlNetSimulated24h": 0,
+  "pnlNetSimulatedCumulative": 0,
+  "return24hPct": 0.0,
+  "returnCumulativePct": 0.0,
+  "realizedPnl": 0,
+  "unrealizedPnl": 0,
+  "feesSimulated": 0,
+  "apiCost": null,
+  "pnlAllCosts": null,
+  "closedTrades": 0,
+  "winRate": null,
+  "maxDrawdownPctFromCurve": 0,
+  "cash": 10000,
+  "quantity": 0,
+  "exposureUsd": 0,
+  "benchmark": {
+    "first": {
+      "time": 1793934000000,
+      "equity": 10000,
+      "benchmark": 10000,
+      "drawdownPct": 0
+    },
+    "last": {
+      "time": 1794355200000,
+      "equity": 10000,
+      "benchmark": 9169.753514975879,
+      "drawdownPct": 0
+    },
+    "delta24h": -341.17325617332426,
+    "return24hPct": -3.5871715173777963,
+    "cumulativePnl": -830.2464850241213,
+    "cumulativePct": -8.30246485024121,
+    "enrollmentLast": {
+      "time": 1793944800000,
+      "equity": 10000,
+      "benchmark": 9966.809848651115,
+      "drawdownPct": 0
+    },
+    "returnSinceEnrollmentLastMarkPct": -7.997105852110831,
+    "cashReturnAssumptionNoInterestPct": 0
+  },
+  "heartbeatAgeMinutes": 24.535713116666667,
+  "feedFetchAgeMinutes": 24.533779783333333,
+  "heartbeatAdvancedVsPrior": true,
+  "sessionError": null,
+  "modelReviewStatus": "completed",
+  "modelReviewErrorFieldPresent": false,
+  "modelReviewError": null,
+  "recoveries24h": [],
+  "successfulCycleGapsOver90Minutes": [
+    {
+      "previous": "2026-11-06T10:05:22.909Z",
+      "next": "2026-11-06T13:11:02.936Z",
+      "minutes": 185.66711666666666
+    },
+    {
+      "previous": "2026-11-06T23:10:58.757Z",
+      "next": "2026-11-07T01:03:00.860Z",
+      "minutes": 112.03505
+    },
+    {
+      "previous": "2026-11-08T07:09:32.567Z",
+      "next": "2026-11-08T09:10:36.108Z",
+      "minutes": 121.05901666666666
+    },
+    {
+      "previous": "2026-11-09T05:02:12.753Z",
+      "next": "2026-11-09T07:03:54.326Z",
+      "minutes": 121.69288333333334
+    },
+    {
+      "previous": "2026-11-09T20:05:16.296Z",
+      "next": "2026-11-09T22:08:30.820Z",
+      "minutes": 123.24206666666667
+    }
+  ],
+  "costStressFixedNotional1500": [
+    {
+      "feeBps": 10,
+      "slippageBps": 10,
+      "roundtripCostUsd": 6.0
+    },
+    {
+      "feeBps": 40,
+      "slippageBps": 10,
+      "roundtripCostUsd": 15.0
+    },
+    {
+      "feeBps": 80,
+      "slippageBps": 10,
+      "roundtripCostUsd": 27.0
+    },
+    {
+      "feeBps": 80,
+      "slippageBps": 25,
+      "roundtripCostUsd": 31.5
+    }
+  ],
+  "oldBacktestsExcluded": 3,
+  "limitations": [
+    "No raw OHLC payload or arrival log: candle finality and full feed availability unverified.",
+    "No fill/position history with trades: stops/execution controls untested.",
+    "Only latest AI review retained; no complete hourly AI archive.",
+    "Cash assumes no interest. Source paper benchmark is gross price-only buy-and-hold, 100% exposure, not exposure-matched; baseline starts before session creation."
+  ],
+  "cycleGapsOver90Minutes24h": [],
+  "maxObservedCycleIntervalMinutes24h": 67.30773333333333,
+  "changeVsPreviousCapture": {
+    "equity": 0,
+    "cash": 0,
+    "quantity": 0,
+    "realizedPnl": 0,
+    "totalFees": 0,
+    "closedTrades": 0
+  },
+  "latestReviewUsageOnly": {
+    "inputTokens": 1310,
+    "outputTokens": 694,
+    "durationMs": 20959,
+    "dailyOrCumulativeUsageAvailable": false
+  },
+  "source": {
+    "kind": "live",
+    "label": "Kraken spot USD · live price proxy",
+    "asOf": "2026-11-11T01:00:00.000Z",
+    "fetchedAt": "2026-11-11T01:04:03.232Z",
+    "timeframe": "1h",
+    "executionModel": "CEX candle proxy; not a DEX fill, gas or liquidity simulation"
+  },
+  "heartbeat": "2026-11-11T01:04:03.116Z",
+  "riskObserved": {
+    "exposurePct": 0.0,
+    "maxPositionPct": 15,
+    "maxDrawdownPct": 8,
+    "stopLossPct": 3,
+    "halted": false,
+    "stopExecutionTestedByForwardTrades": false
+  },
+  "sourceAudit": {
+    "reviewEvidenceIds": [
+      "close",
+      "fast_sma",
+      "slow_sma",
+      "volatility",
+      "momentum"
+    ],
+    "positionAndTimeframeExplicitlyPresent": false,
+    "fileSha256": {
+      "lib/paper-service.ts": "d40a232b18f0db424e5ac60911e70e4cf725a4d65f90bad95c7ade086b40f099",
+      "lib/market.ts": "eb91cf20923f424c582284ac262a22467ad9d94c5ed70d42d31d5054ead9e855",
+      "lib/trading.ts": "1567efa0a4efe0ca195e314515c09252863d469a4f1a652d90a3be187fa6c2f8",
+      "lib/agent-provider.ts": "5b0e558e0254bcf106558cf17c3f688c6854eadf7d7f74b3604ab8850ad2d269"
+    },
+    "scope": "Repository source at recorded sourceCommit; no production request transcript available.",
+    "findings": [
+      "Review evidence has five market indicators; explicit account state and timeframe absent.",
+      "Baseline EXIT cannot be vetoed by the model; sell is a no-op with zero quantity.",
+      "Live adapter filters candle close time and rejects stale/provider failure; no synthetic fallback.",
+      "Paper benchmark initializes initialCash/latest.close without entry fees or slippage."
+    ]
+  },
+  "candidateProfitabilityTestsRun": false,
+  "inputFilesUnchanged": true,
+  "inputSha256": {
+    "data/snapshots/2026-11-11/35c81bc0-26c6-4174-8b3e-e4e416e22767.json": "c349e64d835b151a96b8017e486545411bb58295b162836a3c306591390d6681",
+    "data/snapshots/2026-11-10/35c81bc0-26c6-4174-8b3e-e4e416e22767.json": "2d6fd8dc302196427ffc6d6a2b63305254f56708cf88a950ff974c9d44cab56d",
+    "data/snapshots/2026-11-06/35c81bc0-26c6-4174-8b3e-e4e416e22767.json": "875dc10a543f9dd55a6d7da51914614cf83ffa117818f02c03b286b7920c4a3f"
+  }
+}

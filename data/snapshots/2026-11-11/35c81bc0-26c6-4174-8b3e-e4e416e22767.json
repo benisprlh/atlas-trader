@@ -1,0 +1,1771 @@
+{
+  "fetchedAt": "2026-11-11T01:28:35.258787+00:00",
+  "ownerPrivateVerified": true,
+  "artifactName": "Atlas_Trader_Snapshot_2026-11-11_35c81bc0-26c6-4174-8b3e-e4e416e22767.json",
+  "sourceCommit": "9a58bcd8c27f71bbfa0dd7f28031b3ab9385e5b0",
+  "excludedUnrelatedBacktests": 3,
+  "redactions": [
+    "schedule.taskId; not needed for public performance audit"
+  ],
+  "state": {
+    "session": {
+      "id": "35c81bc0-26c6-4174-8b3e-e4e416e22767",
+      "status": "running",
+      "symbol": "ETH",
+      "config": {
+        "fastPeriod": 12,
+        "slowPeriod": 36,
+        "feeBps": 10,
+        "slippageBps": 10,
+        "initialCash": 10000,
+        "maxPositionPct": 15,
+        "stopLossPct": 3,
+        "maxDrawdownPct": 8
+      },
+      "paperState": {
+        "cash": 10000,
+        "quantity": 0,
+        "entryPrice": 0,
+        "positionCost": 0,
+        "equity": 10000,
+        "peakEquity": 10000,
+        "maxDrawdownPct": 0,
+        "totalFees": 0,
+        "realizedPnl": 0,
+        "closedTrades": 0,
+        "wins": 0,
+        "halted": false,
+        "lastProcessedTime": 1794355200000,
+        "pendingAction": "EXIT",
+        "pendingReason": "Fast moving average is below slow average; exit candidate.",
+        "pendingCompletedAt": 1794359043232,
+        "pendingExpiresAt": 1794369843232,
+        "candleIntervalMs": 3600000,
+        "benchmarkQuantity": 4.479102746137893,
+        "benchmarkCash": 0,
+        "trades": [],
+        "equityCurve": [
+          {
+            "time": 1793934000000,
+            "equity": 10000,
+            "benchmark": 10000,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793937600000,
+            "equity": 10000,
+            "benchmark": 9990.952212452801,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793941200000,
+            "equity": 10000,
+            "benchmark": 9955.522509730848,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793944800000,
+            "equity": 10000,
+            "benchmark": 9966.809848651115,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793948400000,
+            "equity": 10000,
+            "benchmark": 9972.901428385863,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793952000000,
+            "equity": 10000,
+            "benchmark": 9961.569298438137,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793955600000,
+            "equity": 10000,
+            "benchmark": 10015.766441666405,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793959200000,
+            "equity": 10000,
+            "benchmark": 10005.688460487594,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793962800000,
+            "equity": 10000,
+            "benchmark": 10034.757837310028,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793966400000,
+            "equity": 10000,
+            "benchmark": 10013.437308238414,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793970000000,
+            "equity": 10000,
+            "benchmark": 10005.106177130596,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793973600000,
+            "equity": 10000,
+            "benchmark": 9971.064996259947,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793977200000,
+            "equity": 10000,
+            "benchmark": 9979.396127367763,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793980800000,
+            "equity": 10000,
+            "benchmark": 10000.313537192227,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793984400000,
+            "equity": 10000,
+            "benchmark": 9965.28695371743,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793988000000,
+            "equity": 10000,
+            "benchmark": 9979.844037642379,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793991600000,
+            "equity": 10000,
+            "benchmark": 9999.596880752846,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793995200000,
+            "equity": 10000,
+            "benchmark": 9970.527503930412,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1793998800000,
+            "equity": 10000,
+            "benchmark": 10026.426706202212,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794002400000,
+            "equity": 10000,
+            "benchmark": 10008.599877272583,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794006000000,
+            "equity": 10000,
+            "benchmark": 10012.720651799029,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794009600000,
+            "equity": 10000,
+            "benchmark": 10019.394514890775,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794013200000,
+            "equity": 10000,
+            "benchmark": 10049.44929431736,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794016800000,
+            "equity": 10000,
+            "benchmark": 10051.196144388354,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794020400000,
+            "equity": 10000,
+            "benchmark": 10043.402505610076,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794024000000,
+            "equity": 10000,
+            "benchmark": 10038.69944772663,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794027600000,
+            "equity": 10000,
+            "benchmark": 10060.10955885317,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794031200000,
+            "equity": 10000,
+            "benchmark": 10050.38990589405,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794034800000,
+            "equity": 10000,
+            "benchmark": 10047.299324999214,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794038400000,
+            "equity": 10000,
+            "benchmark": 10066.559466807606,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794042000000,
+            "equity": 10000,
+            "benchmark": 10046.582668559831,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794045600000,
+            "equity": 10000,
+            "benchmark": 10052.539875212196,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794049200000,
+            "equity": 10000,
+            "benchmark": 10043.492087664998,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794052800000,
+            "equity": 10000,
+            "benchmark": 10029.114167849895,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794056400000,
+            "equity": 10000,
+            "benchmark": 10044.8806095163,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794060000000,
+            "equity": 10000,
+            "benchmark": 10051.106562333433,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794063600000,
+            "equity": 10000,
+            "benchmark": 10008.107175970508,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794067200000,
+            "equity": 10000,
+            "benchmark": 9991.355331699951,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794070800000,
+            "equity": 10000,
+            "benchmark": 10000.985402604148,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794074400000,
+            "equity": 10000,
+            "benchmark": 10006.136370762208,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794078000000,
+            "equity": 10000,
+            "benchmark": 9998.701060203619,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794081600000,
+            "equity": 10000,
+            "benchmark": 9969.990011600874,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794085200000,
+            "equity": 10000,
+            "benchmark": 9986.025199432048,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794088800000,
+            "equity": 10000,
+            "benchmark": 9994.714658759554,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794092400000,
+            "equity": 10000,
+            "benchmark": 10019.21535078093,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794096000000,
+            "equity": 10000,
+            "benchmark": 10004.210356581369,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794099600000,
+            "equity": 10000,
+            "benchmark": 9992.743853551254,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794103200000,
+            "equity": 10000,
+            "benchmark": 10002.821834730064,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794106800000,
+            "equity": 10000,
+            "benchmark": 10009.226951657043,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794110400000,
+            "equity": 10000,
+            "benchmark": 9998.43231403885,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794114000000,
+            "equity": 10000,
+            "benchmark": 9997.626075544546,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794117600000,
+            "equity": 10000,
+            "benchmark": 9992.385525331563,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794121200000,
+            "equity": 10000,
+            "benchmark": 10025.038184350908,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794124800000,
+            "equity": 10000,
+            "benchmark": 10015.36332241925,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794128400000,
+            "equity": 10000,
+            "benchmark": 10005.688460487594,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794132000000,
+            "equity": 10000,
+            "benchmark": 10002.553088565297,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794135600000,
+            "equity": 10000,
+            "benchmark": 10021.723648318768,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794139200000,
+            "equity": 10000,
+            "benchmark": 10017.55808276486,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794142800000,
+            "equity": 10000,
+            "benchmark": 10002.597879592759,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794146400000,
+            "equity": 10000,
+            "benchmark": 10022.529886813072,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794150000000,
+            "equity": 10000,
+            "benchmark": 10029.248540932278,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794153600000,
+            "equity": 10000,
+            "benchmark": 9978.993008120611,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794157200000,
+            "equity": 10000,
+            "benchmark": 9978.63467990092,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794160800000,
+            "equity": 10000,
+            "benchmark": 10003.448909114526,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794164400000,
+            "equity": 10000,
+            "benchmark": 9985.532498129973,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794168000000,
+            "equity": 10000,
+            "benchmark": 9961.300552273366,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794171600000,
+            "equity": 10000,
+            "benchmark": 9518.093335543022,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794175200000,
+            "equity": 10000,
+            "benchmark": 9526.42446665084,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794178800000,
+            "equity": 10000,
+            "benchmark": 9513.838187934192,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794182400000,
+            "equity": 10000,
+            "benchmark": 9590.923546195225,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794186000000,
+            "equity": 10000,
+            "benchmark": 9583.980936938711,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794189600000,
+            "equity": 10000,
+            "benchmark": 9601.404646621188,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794193200000,
+            "equity": 10000,
+            "benchmark": 9576.052925078047,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794196800000,
+            "equity": 10000,
+            "benchmark": 9566.512436228773,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794200400000,
+            "equity": 10000,
+            "benchmark": 9524.946362744615,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794204000000,
+            "equity": 10000,
+            "benchmark": 9454.982777849938,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794207600000,
+            "equity": 10000,
+            "benchmark": 9365.490304982104,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794211200000,
+            "equity": 10000,
+            "benchmark": 9497.982164212865,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794214800000,
+            "equity": 10000,
+            "benchmark": 9433.707039805784,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794218400000,
+            "equity": 10000,
+            "benchmark": 9430.97478713064,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794222000000,
+            "equity": 10000,
+            "benchmark": 9453.146345724022,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794225600000,
+            "equity": 10000,
+            "benchmark": 9494.130135851185,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794229200000,
+            "equity": 10000,
+            "benchmark": 9509.135130050747,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794232800000,
+            "equity": 10000,
+            "benchmark": 9525.12552685446,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794236400000,
+            "equity": 10000,
+            "benchmark": 9607.764972520703,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794240000000,
+            "equity": 10000,
+            "benchmark": 9546.266891816229,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794243600000,
+            "equity": 10000,
+            "benchmark": 9511.285099368893,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794247200000,
+            "equity": 10000,
+            "benchmark": 9512.225710945582,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794250800000,
+            "equity": 10000,
+            "benchmark": 9523.423467810926,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794254400000,
+            "equity": 10000,
+            "benchmark": 9530.724405287132,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794258000000,
+            "equity": 10000,
+            "benchmark": 9527.141123090221,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794261600000,
+            "equity": 10000,
+            "benchmark": 9555.40426141835,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794265200000,
+            "equity": 10000,
+            "benchmark": 9552.358471550977,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794268800000,
+            "equity": 10000,
+            "benchmark": 9510.926771149203,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794272400000,
+            "equity": 10000,
+            "benchmark": 9509.94136854505,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794276000000,
+            "equity": 10000,
+            "benchmark": 9497.399880855866,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794279600000,
+            "equity": 10000,
+            "benchmark": 9460.492074227688,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794283200000,
+            "equity": 10000,
+            "benchmark": 9493.144733247034,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794286800000,
+            "equity": 10000,
+            "benchmark": 9506.67162354037,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794290400000,
+            "equity": 10000,
+            "benchmark": 9473.83980041118,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794294000000,
+            "equity": 10000,
+            "benchmark": 9465.956579577978,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794297600000,
+            "equity": 10000,
+            "benchmark": 9475.676232537098,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794301200000,
+            "equity": 10000,
+            "benchmark": 9415.073972381851,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794304800000,
+            "equity": 10000,
+            "benchmark": 9353.262354485147,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794308400000,
+            "equity": 10000,
+            "benchmark": 9367.59548327279,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794312000000,
+            "equity": 10000,
+            "benchmark": 9391.513891937164,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794315600000,
+            "equity": 10000,
+            "benchmark": 9243.121217957618,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794319200000,
+            "equity": 10000,
+            "benchmark": 9318.459726147656,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794322800000,
+            "equity": 10000,
+            "benchmark": 9057.596782212586,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794326400000,
+            "equity": 10000,
+            "benchmark": 9033.544000465825,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794330000000,
+            "equity": 10000,
+            "benchmark": 9077.976699707513,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794333600000,
+            "equity": 10000,
+            "benchmark": 9146.193434531193,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794337200000,
+            "equity": 10000,
+            "benchmark": 9148.567358986646,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794340800000,
+            "equity": 10000,
+            "benchmark": 9213.379975723261,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794344400000,
+            "equity": 10000,
+            "benchmark": 9202.047845775533,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794348000000,
+            "equity": 10000,
+            "benchmark": 9164.468173735435,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794351600000,
+            "equity": 10000,
+            "benchmark": 9186.639732328818,
+            "drawdownPct": 0
+          },
+          {
+            "time": 1794355200000,
+            "equity": 10000,
+            "benchmark": 9169.753514975879,
+            "drawdownPct": 0
+          }
+        ],
+        "latestDecision": {
+          "engine": "rules",
+          "asOf": 1794358800000,
+          "action": "EXIT",
+          "reason": "Fast moving average is below slow average; exit candidate.",
+          "confidence": null,
+          "agents": [
+            {
+              "role": "Research / Context",
+              "engine": "rules",
+              "status": "ready",
+              "action": "EXIT",
+              "summary": "Closed-candle trend and momentum assessment. No news or LLM inference was used.",
+              "evidence": [
+                "SMA 12: 2045.83",
+                "SMA 36: 2094.82",
+                "Trend spread: -2.34%"
+              ]
+            },
+            {
+              "role": "Challenger",
+              "engine": "rules",
+              "status": "warning",
+              "action": "EXIT",
+              "summary": "A trend signal can fail in sideways markets. Fees, execution assumptions and concentration remain relevant.",
+              "evidence": [
+                "Per-bar volatility: 0.77%",
+                "Position cap: 15%",
+                "Rule-based review; not an independent AI opinion."
+              ]
+            },
+            {
+              "role": "Decision Synthesizer",
+              "engine": "rules",
+              "status": "ready",
+              "action": "EXIT",
+              "summary": "Fast moving average is below slow average; exit candidate.",
+              "evidence": [
+                "Proposal only; deterministic risk checks still apply.",
+                "No calibrated probability of profit is asserted."
+              ]
+            }
+          ],
+          "indicators": {
+            "fastSma": 2045.8291666666664,
+            "slowSma": 2094.815,
+            "momentumPct": -3.577181397714735,
+            "volatilityPct": 0.7652873809298222
+          }
+        },
+        "status": "ready"
+      },
+      "lastTick": "2026-11-11T01:04:03.116Z",
+      "source": {
+        "kind": "live",
+        "label": "Kraken spot USD · live price proxy",
+        "asOf": "2026-11-11T01:00:00.000Z",
+        "fetchedAt": "2026-11-11T01:04:03.232Z",
+        "timeframe": "1h",
+        "executionModel": "CEX candle proxy; not a DEX fill, gas or liquidity simulation"
+      },
+      "error": null,
+      "createdAt": "2026-11-06T04:01:20.793Z",
+      "mode": "paper",
+      "historyRetention": {
+        "maxEvents": 2000,
+        "retained": "latest",
+        "lifetimeCounters": true
+      },
+      "modelReview": {
+        "configured": true,
+        "engine": "llm",
+        "status": "completed",
+        "analysis": {
+          "engine": "llm",
+          "asOf": 1794358800000,
+          "action": "EXIT",
+          "reason": "Pertahankan rekomendasi keluar karena tren rata-rata bergerak dan momentum menunjukkan pelemahan. Indikasi penguatan pada penutupan belum cukup untuk membatalkan sinyal keluar.",
+          "confidence": null,
+          "agents": [
+            {
+              "role": "Research",
+              "engine": "llm",
+              "status": "completed",
+              "action": "HOLD",
+              "summary": "Tren rata-rata bergerak dan momentum menunjukkan pelemahan, tetapi harga penutupan memberi indikasi yang belum selaras. Status posisi tidak tersedia, sehingga rekomendasi keluar belum dapat dipastikan; sebaiknya menunggu konfirmasi.",
+              "evidenceIds": [
+                "close",
+                "fast_sma",
+                "slow_sma",
+                "momentum"
+              ],
+              "evidence": [
+                "Latest closed candle USD: 2047.23",
+                "Fast SMA: 2045.8291666666664",
+                "Slow SMA: 2094.815",
+                "24-hour momentum percent: -3.577181397714735"
+              ]
+            },
+            {
+              "role": "Challenger",
+              "engine": "llm",
+              "status": "completed",
+              "action": "HOLD",
+              "summary": "Rata-rata bergerak dan momentum mendukung pelemahan, tetapi penutupan di atas rata-rata cepat memberi sinyal yang belum selaras. Persetujuan dengan ulasan sebelumnya bukan konfirmasi independen. Status posisi tidak diketahui, sehingga rekomendasi keluar belum cukup beralasan.",
+              "evidenceIds": [
+                "close",
+                "fast_sma",
+                "slow_sma",
+                "momentum"
+              ],
+              "evidence": [
+                "Latest closed candle USD: 2047.23",
+                "Fast SMA: 2045.8291666666664",
+                "Slow SMA: 2094.815",
+                "24-hour momentum percent: -3.577181397714735"
+              ]
+            },
+            {
+              "role": "Synthesizer",
+              "engine": "llm",
+              "status": "completed",
+              "action": "EXIT",
+              "summary": "Pertahankan rekomendasi keluar karena tren rata-rata bergerak dan momentum menunjukkan pelemahan. Indikasi penguatan pada penutupan belum cukup untuk membatalkan sinyal keluar.",
+              "evidenceIds": [
+                "close",
+                "fast_sma",
+                "slow_sma",
+                "momentum"
+              ],
+              "evidence": [
+                "Latest closed candle USD: 2047.23",
+                "Fast SMA: 2045.8291666666664",
+                "Slow SMA: 2094.815",
+                "24-hour momentum percent: -3.577181397714735"
+              ]
+            }
+          ],
+          "indicators": {
+            "fastSma": 2045.8291666666664,
+            "slowSma": 2094.815,
+            "momentumPct": -3.577181397714735,
+            "volatilityPct": 0.7652873809298222
+          }
+        },
+        "reviews": [
+          {
+            "role": "Research",
+            "engine": "llm",
+            "status": "completed",
+            "action": "HOLD",
+            "summary": "Tren rata-rata bergerak dan momentum menunjukkan pelemahan, tetapi harga penutupan memberi indikasi yang belum selaras. Status posisi tidak tersedia, sehingga rekomendasi keluar belum dapat dipastikan; sebaiknya menunggu konfirmasi.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2047.23",
+              "Fast SMA: 2045.8291666666664",
+              "Slow SMA: 2094.815",
+              "24-hour momentum percent: -3.577181397714735"
+            ]
+          },
+          {
+            "role": "Challenger",
+            "engine": "llm",
+            "status": "completed",
+            "action": "HOLD",
+            "summary": "Rata-rata bergerak dan momentum mendukung pelemahan, tetapi penutupan di atas rata-rata cepat memberi sinyal yang belum selaras. Persetujuan dengan ulasan sebelumnya bukan konfirmasi independen. Status posisi tidak diketahui, sehingga rekomendasi keluar belum cukup beralasan.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2047.23",
+              "Fast SMA: 2045.8291666666664",
+              "Slow SMA: 2094.815",
+              "24-hour momentum percent: -3.577181397714735"
+            ]
+          },
+          {
+            "role": "Synthesizer",
+            "engine": "llm",
+            "status": "completed",
+            "action": "EXIT",
+            "summary": "Pertahankan rekomendasi keluar karena tren rata-rata bergerak dan momentum menunjukkan pelemahan. Indikasi penguatan pada penutupan belum cukup untuk membatalkan sinyal keluar.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2047.23",
+              "Fast SMA: 2045.8291666666664",
+              "Slow SMA: 2094.815",
+              "24-hour momentum percent: -3.577181397714735"
+            ]
+          }
+        ],
+        "provider": "OpenAI",
+        "model": "gpt-6.1-sol",
+        "inputTokens": 1310,
+        "outputTokens": 694,
+        "durationMs": 20959
+      },
+      "reviewedPendingAt": 1794359043232,
+      "agents": {
+        "engine": "llm",
+        "asOf": 1794358800000,
+        "action": "EXIT",
+        "reason": "Pertahankan rekomendasi keluar karena tren rata-rata bergerak dan momentum menunjukkan pelemahan. Indikasi penguatan pada penutupan belum cukup untuk membatalkan sinyal keluar.",
+        "confidence": null,
+        "agents": [
+          {
+            "role": "Research",
+            "engine": "llm",
+            "status": "completed",
+            "action": "HOLD",
+            "summary": "Tren rata-rata bergerak dan momentum menunjukkan pelemahan, tetapi harga penutupan memberi indikasi yang belum selaras. Status posisi tidak tersedia, sehingga rekomendasi keluar belum dapat dipastikan; sebaiknya menunggu konfirmasi.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2047.23",
+              "Fast SMA: 2045.8291666666664",
+              "Slow SMA: 2094.815",
+              "24-hour momentum percent: -3.577181397714735"
+            ]
+          },
+          {
+            "role": "Challenger",
+            "engine": "llm",
+            "status": "completed",
+            "action": "HOLD",
+            "summary": "Rata-rata bergerak dan momentum mendukung pelemahan, tetapi penutupan di atas rata-rata cepat memberi sinyal yang belum selaras. Persetujuan dengan ulasan sebelumnya bukan konfirmasi independen. Status posisi tidak diketahui, sehingga rekomendasi keluar belum cukup beralasan.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2047.23",
+              "Fast SMA: 2045.8291666666664",
+              "Slow SMA: 2094.815",
+              "24-hour momentum percent: -3.577181397714735"
+            ]
+          },
+          {
+            "role": "Synthesizer",
+            "engine": "llm",
+            "status": "completed",
+            "action": "EXIT",
+            "summary": "Pertahankan rekomendasi keluar karena tren rata-rata bergerak dan momentum menunjukkan pelemahan. Indikasi penguatan pada penutupan belum cukup untuk membatalkan sinyal keluar.",
+            "evidenceIds": [
+              "close",
+              "fast_sma",
+              "slow_sma",
+              "momentum"
+            ],
+            "evidence": [
+              "Latest closed candle USD: 2047.23",
+              "Fast SMA: 2045.8291666666664",
+              "Slow SMA: 2094.815",
+              "24-hour momentum percent: -3.577181397714735"
+            ]
+          }
+        ],
+        "indicators": {
+          "fastSma": 2045.8291666666664,
+          "slowSma": 2094.815,
+          "momentumPct": -3.577181397714735,
+          "volatilityPct": 0.7652873809298222
+        }
+      },
+      "reviewedConfiguration": "responses-v2|https://api.openai.com/v1/responses|gpt-6.1-sol"
+    },
+    "settings": {},
+    "events": [
+      {
+        "id": "561a8ec8-7acd-4648-8f4a-7c34b3b51aee",
+        "time": "2026-11-11T01:04:24.191Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "5c71a6a5-976b-4d46-8b50-b48196203e49",
+        "time": "2026-11-11T00:07:03.891Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "c9f78f16-ce90-4105-8d99-06862e763591",
+        "time": "2026-11-10T23:03:36.446Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "3c0581b3-77b4-49b5-a4f6-47f763ccd50c",
+        "time": "2026-11-10T22:04:35.599Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "8b52d31b-124e-4f56-afbe-de2c7d3d2fbb",
+        "time": "2026-11-10T21:01:28.917Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "59831bec-2dd0-4f63-bc5e-ccb08bd6a9a5",
+        "time": "2026-11-10T20:10:47.294Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "fbf6342e-2300-4893-b2a1-65928dfba6a9",
+        "time": "2026-11-10T19:04:14.728Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "c492b2de-8a36-4ebf-8585-e7524fc9a46a",
+        "time": "2026-11-10T18:08:09.940Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "d9697c0e-0c5f-463d-9de6-8e5cc26e7736",
+        "time": "2026-11-10T17:04:19.018Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "460aa5d7-7c41-4bf9-a62c-dd66bf2b8b1e",
+        "time": "2026-11-10T16:07:04.171Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "1af7f247-4c28-4c37-893e-2cb1d7f7d3f5",
+        "time": "2026-11-10T15:05:03.258Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "b797baf7-22ee-44d6-8c47-447f10f046de",
+        "time": "2026-11-10T14:03:31.707Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "07ceaaf3-1f81-4e5e-b3a0-c8d62a6dab9f",
+        "time": "2026-11-10T13:04:03.765Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "5304577c-f0f5-4a24-b381-751a9edec066",
+        "time": "2026-11-10T12:12:14.256Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "f24a1eee-fff7-4632-9fd8-290573d43386",
+        "time": "2026-11-10T11:04:55.792Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "7afe799f-31f2-4ed4-aa35-be0a00ea4b0b",
+        "time": "2026-11-10T10:09:45.869Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "e28556c7-508c-4ed5-9e10-1f6e049ced06",
+        "time": "2026-11-10T09:10:30.840Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "0634f416-22ff-4e45-a05d-b71be9c3c0a3",
+        "time": "2026-11-10T08:06:51.828Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "50cf34c4-f024-45f4-a18c-902c1a0e6f55",
+        "time": "2026-11-10T07:13:47.275Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "486bb7e7-3603-4a34-854b-2994d3ab7e1a",
+        "time": "2026-11-10T06:06:38.392Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "1d503fd8-b093-4497-9d0b-b19d319b0bf1",
+        "time": "2026-11-10T05:03:56.676Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "cc10b8bb-c78d-45cd-92fa-e955c4867e43",
+        "time": "2026-11-10T04:09:49.819Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "8b598167-f8fe-4cd6-aff7-c1cb0e4e9319",
+        "time": "2026-11-10T03:09:58.892Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "73edb41d-deeb-4c9c-8edf-4473699c0e10",
+        "time": "2026-11-10T02:06:37.343Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "e806abda-860b-42d0-8d45-497e56509432",
+        "time": "2026-11-10T01:08:33.813Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "ebc0bb2a-5301-41ff-9801-3dd00278154c",
+        "time": "2026-11-10T00:07:29.698Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "0ce62621-4b02-4980-8c3b-d6eb0f1f9477",
+        "time": "2026-11-09T23:03:10.008Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "99211daa-1eb2-4c4c-a51a-01e3d14467c0",
+        "time": "2026-11-09T22:08:30.820Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "51e05c97-f231-4432-a8d4-5bd837acf295",
+        "time": "2026-11-09T21:06:47.197Z",
+        "type": "error",
+        "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+      },
+      {
+        "id": "7954c026-db83-4d7a-8054-a5b57fe9d028",
+        "time": "2026-11-09T20:05:16.296Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "59f9c9de-280c-4a43-b470-ef8e5f636c63",
+        "time": "2026-11-09T19:01:50.985Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "396c1ebf-c606-4a15-bedc-55625c618d55",
+        "time": "2026-11-09T18:07:40.991Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "cf99b68c-ceba-4b99-9ec6-cf7a9fd2ee95",
+        "time": "2026-11-09T17:09:58.763Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "15fe4972-8f7d-47d8-a65e-1023dd22669c",
+        "time": "2026-11-09T16:03:11.036Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "2e77fa9b-609e-4ccc-903d-1a6f3bf2680e",
+        "time": "2026-11-09T15:12:42.714Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "a6d21d66-a5a6-4d00-ae2c-7841307f085f",
+        "time": "2026-11-09T14:32:15.838Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "fa2f2b72-68d9-4212-ba57-77ae9e10093d",
+        "time": "2026-11-09T13:05:56.897Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "64c16784-d40a-42cb-b671-0b81d2a06e52",
+        "time": "2026-11-09T12:08:42.281Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "e7fca2fb-8aa0-427f-8dde-630191e2bb51",
+        "time": "2026-11-09T11:06:52.411Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "227746ee-3360-4181-a5eb-c574597e6a39",
+        "time": "2026-11-09T10:07:49.588Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "71af8c42-8ee3-4421-8a9c-4293eea258dd",
+        "time": "2026-11-09T09:24:15.823Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "57a004c1-e37e-44f0-8180-4728d26fae89",
+        "time": "2026-11-09T08:27:49.312Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "0bc14d3f-c4f1-40da-83e3-4c1cf196162f",
+        "time": "2026-11-09T07:03:54.326Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "33cb6821-fd90-4469-9c23-6702b89cac67",
+        "time": "2026-11-09T06:05:56.631Z",
+        "type": "error",
+        "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+      },
+      {
+        "id": "1189731e-4495-4539-9abd-6820f91c946d",
+        "time": "2026-11-09T05:02:12.753Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "6408e988-7fc5-445a-bf75-bf769f58c59f",
+        "time": "2026-11-09T04:04:49.102Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "5f9e73c2-ad5c-43de-a7ef-9567122248da",
+        "time": "2026-11-09T03:07:41.518Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "8244c4f0-1b48-46e7-8ce3-5caaa3ffb067",
+        "time": "2026-11-09T02:06:26.487Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "4edc5b9c-ef2b-4e11-b4a3-e193860526e6",
+        "time": "2026-11-09T01:07:25.369Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "8fe2289a-fb42-4570-9415-2f519ebc5dba",
+        "time": "2026-11-09T00:05:44.418Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "f7492f63-0e60-4f78-86ea-243a786fbf67",
+        "time": "2026-11-08T23:10:48.604Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "fca6c0a4-6348-4f64-8e43-d03cc3c838b6",
+        "time": "2026-11-08T22:10:18.801Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "58e7fb37-1801-4353-b03d-811b3688b17c",
+        "time": "2026-11-08T21:08:47.639Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "3af794fb-cfc4-4d74-a663-6ead7729c75f",
+        "time": "2026-11-08T20:06:53.312Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "2905ca46-e464-4ea4-b885-2d3b44b6fffe",
+        "time": "2026-11-08T19:04:40.580Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "986cee11-f124-411e-a6c1-41baebc2936d",
+        "time": "2026-11-08T18:03:08.946Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "7cf09640-adb5-4cd6-9a1e-51dc1c9e29d1",
+        "time": "2026-11-08T17:07:13.988Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "87c92b4a-f9aa-4ab8-bc5e-a1548f515c4c",
+        "time": "2026-11-08T16:07:14.832Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "dba610c2-c68b-4a09-bbff-a01383057dca",
+        "time": "2026-11-08T15:05:18.090Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "582c74e0-dac6-4779-89c2-d1297b8c24b5",
+        "time": "2026-11-08T14:07:02.516Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "ee442482-5af7-44a0-a519-daf1c729513c",
+        "time": "2026-11-08T13:02:51.030Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "d7f7214f-4a6e-43ea-be2b-e462a2c0c0d1",
+        "time": "2026-11-08T12:11:04.070Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "a514536b-04d2-41fa-9886-acfd2aa6e54b",
+        "time": "2026-11-08T11:05:23.781Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "7cbd29ed-6b2d-48a3-9f8f-500338809266",
+        "time": "2026-11-08T10:08:15.796Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "5e300804-91cd-4f88-b913-36ed23e05135",
+        "time": "2026-11-08T09:10:36.108Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "db4d0748-8121-4b2e-ab83-58ef19545fe4",
+        "time": "2026-11-08T08:10:31.994Z",
+        "type": "error",
+        "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+      },
+      {
+        "id": "a677beba-c499-47e7-ae51-741fb897a1c3",
+        "time": "2026-11-08T07:09:32.567Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "26e59432-c273-4fef-83e9-d8b94b307258",
+        "time": "2026-11-08T06:10:00.245Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "7e36098f-b239-4f53-9cbe-9688f621d41c",
+        "time": "2026-11-08T05:06:09.886Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "aaf6806f-7bdd-4bcf-a3b0-f7c8095547e5",
+        "time": "2026-11-08T04:08:50.061Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "323c50cf-3fbd-4815-bf38-6d140c594193",
+        "time": "2026-11-08T03:03:58.094Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "7f0158ac-4546-4917-b3b8-2f8c4b40344e",
+        "time": "2026-11-08T02:10:12.528Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "91fb7a22-2ff5-4455-8f6f-c1fdfeae738a",
+        "time": "2026-11-08T01:07:24.224Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "40bbda56-e0b6-42b0-8141-fdb3756e0d5b",
+        "time": "2026-11-08T00:09:54.657Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "d401223d-33fd-440b-bd47-c6a438366bdd",
+        "time": "2026-11-07T23:03:51.740Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "bdc9f36a-6a72-49a2-b8b5-cbddfb150c6e",
+        "time": "2026-11-07T22:01:23.459Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "c5e18157-0a8d-455e-bf2e-a88df4a6bc54",
+        "time": "2026-11-07T21:10:16.925Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "9de22c0d-60a6-40a6-9c11-72bd89880416",
+        "time": "2026-11-07T20:07:02.204Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "08bb9ae5-4d0e-4fb5-9c60-7c5f96cdd2f9",
+        "time": "2026-11-07T19:02:10.585Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "52edd11d-0c6a-45a1-8e0b-f12213d1d524",
+        "time": "2026-11-07T18:07:14.775Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "df24b3ba-c9cd-4686-a591-acfbaa0184c9",
+        "time": "2026-11-07T17:04:52.405Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "eaa73cb8-64d6-4bad-ad98-db3faf0ded5b",
+        "time": "2026-11-07T16:06:30.432Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "9161c606-10e1-4b0c-9fe1-a880e16978d9",
+        "time": "2026-11-07T15:08:48.368Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "8d2062b4-b780-4f68-a170-44039f80fe0d",
+        "time": "2026-11-07T14:01:55.103Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "624554e6-18a5-417b-b78b-6ee208e768c4",
+        "time": "2026-11-07T13:05:48.772Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "cb189227-5c18-4c32-b985-67537f44cd5b",
+        "time": "2026-11-07T12:01:10.165Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "439d5d67-aa42-4f67-9f3e-ca546df18274",
+        "time": "2026-11-07T11:06:27.433Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "d6be953a-9f5f-4c3f-bb96-65a82ca08e91",
+        "time": "2026-11-07T10:08:39.675Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "2ab47980-db19-4a1e-a495-2e8d615cd8f4",
+        "time": "2026-11-07T09:02:19.614Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "7951ab61-32cc-41f8-a462-79ce9530c6df",
+        "time": "2026-11-07T08:07:09.474Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "8fdc2d21-00d4-4344-a70e-2c91bbfe475c",
+        "time": "2026-11-07T07:02:46.016Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "7b7d0468-0b64-4449-acca-f233f170ab63",
+        "time": "2026-11-07T06:02:47.038Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "aae67150-e287-46e6-8af3-9894f9d896ad",
+        "time": "2026-11-07T05:08:30.852Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "b4b87ea7-40da-4523-98e1-e7e2d21a9c3b",
+        "time": "2026-11-07T04:09:48.281Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan HOLD; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "4f95f360-900e-4705-a884-0510a8282dee",
+        "time": "2026-11-07T03:01:41.873Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "d3a31b2d-c538-4dbe-830c-fb6b1c5e19e8",
+        "time": "2026-11-07T02:07:54.435Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "2459b9c9-5fff-4f50-989c-73ac165fd101",
+        "time": "2026-11-07T01:03:00.860Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "039645c6-00ae-4a08-ab9f-b02ad573ebb4",
+        "time": "2026-11-07T00:06:24.519Z",
+        "type": "error",
+        "message": "Siklus gagal; entry baru tidak dibuat. Provider tidak mengembalikan data valid."
+      },
+      {
+        "id": "56ff0290-77ff-4fad-a238-317e48956722",
+        "time": "2026-11-06T23:10:58.757Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "342d00f5-7b30-4e9a-8679-69332d9b5967",
+        "time": "2026-11-06T22:06:17.712Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "08a563ed-dce8-4dec-9d21-fbfe4caab030",
+        "time": "2026-11-06T21:08:30.785Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "b919ca90-3218-48a4-9cba-9bfb89c907e9",
+        "time": "2026-11-06T20:05:15.761Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "33d1f477-b46d-4c79-b377-7bf059ca851f",
+        "time": "2026-11-06T19:07:26.804Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "2adba08c-7f96-4ae1-b6e9-edb95ef87359",
+        "time": "2026-11-06T18:09:50.533Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "b8b33452-a379-4388-8ac3-eba920fd4d91",
+        "time": "2026-11-06T17:06:34.434Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "819acbda-6fd0-4b00-b79a-4ce4b6830fe2",
+        "time": "2026-11-06T16:03:39.783Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "9ba7ccb0-30eb-4363-8cd2-ee6fa74f2697",
+        "time": "2026-11-06T15:10:51.663Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "e2e7c030-5f5b-4974-9d26-2af29aa9d1f8",
+        "time": "2026-11-06T14:09:19.174Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "6c5557b6-8e8b-46c5-bfc5-a99c1facb49f",
+        "time": "2026-11-06T13:11:02.936Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "56aef2bd-9dbb-4848-afe1-ff50d8cb4889",
+        "time": "2026-11-06T10:05:22.909Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "89db7359-6d76-40f0-8d8c-861c91b950be",
+        "time": "2026-11-06T09:11:15.845Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "387e3019-d3ae-4110-9fd0-9089c1ab3a14",
+        "time": "2026-11-06T08:10:49.418Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "75acede6-d2a8-4a66-9481-4a058adcf5ec",
+        "time": "2026-11-06T07:04:18.333Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "064108e7-0e50-4da5-9851-d1a5aa771352",
+        "time": "2026-11-06T06:58:25.745Z",
+        "type": "ai_configuration",
+        "message": "Konfigurasi AI diterapkan pada sesi paper yang sedang berjalan."
+      },
+      {
+        "id": "99ac1ceb-1dbc-4515-9464-be5b64dc164e",
+        "time": "2026-11-06T06:54:48.826Z",
+        "type": "ai_configuration",
+        "message": "Konfigurasi AI diterapkan pada sesi paper yang sedang berjalan."
+      },
+      {
+        "id": "88f9d895-09fa-4ea6-9075-5b9a60132e3f",
+        "time": "2026-11-06T06:04:06.065Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "de36a449-51a8-4708-9563-4901b22ac1a2",
+        "time": "2026-11-06T05:02:48.303Z",
+        "type": "cycle",
+        "message": "Candle baru diproses: ETH. Keputusan EXIT; saldo sepenuhnya virtual."
+      },
+      {
+        "id": "aed595ca-5bd3-4535-8488-1f16e213b94c",
+        "time": "2026-11-06T04:03:02.418Z",
+        "type": "schedule",
+        "message": "Scheduler paper terhubung. Hanya memproses sesi paper yang running."
+      },
+      {
+        "id": "13be108b-4afc-444f-8bd4-b510ab60af3c",
+        "time": "2026-11-06T04:01:20.952Z",
+        "type": "start",
+        "message": "Auto paper dimulai pada data baru. Histori hanya untuk warm-up; tidak ada trade historis yang ditambahkan."
+      }
+    ],
+    "schedule": {
+      "status": "connected",
+      "lastHeartbeat": "2026-11-11T01:04:03.116Z"
+    },
+    "capabilities": {
+      "llmConfigured": true,
+      "scheduler": "connected",
+      "liveTrading": false,
+      "wallet": "EVM read-only",
+      "delegation": "draft-only"
+    }
+  }
+}
