@@ -1,0 +1,195 @@
+{
+  "dateWIB": "2026-11-12",
+  "sessionId": "35c81bc0-26c6-4174-8b3e-e4e416e22767",
+  "mainSessionModified": false,
+  "sourceCommit": "c96272512e2c9123b60e1f0a6d1e1e9353c90c6a",
+  "candidates": [
+    {
+      "id": "AT-20261107-01",
+      "name": "Cost-aware entry",
+      "origin": "Continued candidate; all earlier outcomes retained in dated archives",
+      "hypothesis": "Entry net edge filter reduces trading losses after realistic fees",
+      "status": "cost_arithmetic_only_profitability_not_tested",
+      "promoted": false,
+      "source": "https://www.kraken.com/pro/fees",
+      "benefit": "Avoid turnover without net edge",
+      "risk": "Missed trends, erroneous forecasts and optimistic maker fills",
+      "passCriteria": "180+ days ETH/USD 1h, rolling train90/test30 >=3 folds; warmup36; fills after decision; >=30 closed OOS trades; median net improvement>0; positive net at 80+25bps stress; DD<=8%; exposure<=15%; report uncertainty and all folds; API ledger for all-cost claim",
+      "missing": [
+        "verified OHLCV dataset and manifest",
+        "account fee tier and spread/slippage observations",
+        "API cost ledger"
+      ],
+      "performed": "Rechecked Kraken Pro fee table; recalculated fixed-notional sensitivity; no return backtest",
+      "result": [
+        {
+          "feeBps": 10,
+          "slippageBps": 10,
+          "roundtripCostUsd": 6.0
+        },
+        {
+          "feeBps": 40,
+          "slippageBps": 10,
+          "roundtripCostUsd": 15.0
+        },
+        {
+          "feeBps": 80,
+          "slippageBps": 10,
+          "roundtripCostUsd": 27.0
+        },
+        {
+          "feeBps": 80,
+          "slippageBps": 25,
+          "roundtripCostUsd": 31.5
+        }
+      ],
+      "currentSourceFacts": {
+        "retrievedDateWIB": "2026-11-12",
+        "tier1MakerBps": 40,
+        "tier1TakerBps": 80,
+        "actualAccountTier": "unavailable"
+      }
+    },
+    {
+      "id": "AT-20261107-02",
+      "name": "Candle finality and timing replay",
+      "origin": "Continued candidate; all earlier outcomes retained in dated archives",
+      "hypothesis": "Final candles and explicit timing reduce leakage and replay mismatch",
+      "status": "partial_audit_pass_replay_not_run",
+      "promoted": false,
+      "sources": [
+        "https://docs.kraken.com/api-reference/market-data/get-ohlc-data",
+        "https://support.kraken.com/articles/360047124832-downloadable-historical-ohlcvt-open-high-low-close-volume-trades-data"
+      ],
+      "benefit": "Reproducible measurements without look-ahead",
+      "risk": "Latency, historical arrival assumptions, data gaps",
+      "passCriteria": "100% decisions use already-final and received candles; fill after decision; no duplicate timestamps, lookahead or synthetic bars; evidence-labeled gaps; last30days untouched holdout; cost model from candidate01; report netPnL/DD/exposure/opportunity cost",
+      "missing": [
+        "raw OHLC responses with receivedAt/closedAt",
+        "decision and fill ledger",
+        "verified long OHLCV dataset"
+      ],
+      "performed": "12 snapshot checks passed; 4 error events and 3 gaps over90 minutes observed in holdout day; finality replay not run",
+      "result": {
+        "checks": {
+          "session_matches": true,
+          "config_matches": true,
+          "reviewed_configuration_matches_prior": true,
+          "owner_private_verified": true,
+          "hourly_marks_contiguous": true,
+          "prior_marks_unchanged": true,
+          "prior_marks_retained": true,
+          "equity_cash_flat_reconciliation": true,
+          "closed_trade_counter_matches_empty_history": true,
+          "no_drawdown_breach_observed": true,
+          "no_exposure_breach_observed": true,
+          "prior_events_unchanged_and_retained": true
+        },
+        "gaps24h": [
+          {
+            "previous": "2026-11-11T10:10:43.377Z",
+            "next": "2026-11-11T12:08:35.682Z",
+            "minutes": 117.87175
+          },
+          {
+            "previous": "2026-11-11T16:06:55.068Z",
+            "next": "2026-11-11T19:07:04.149Z",
+            "minutes": 180.15135
+          },
+          {
+            "previous": "2026-11-11T21:10:45.901Z",
+            "next": "2026-11-11T23:10:08.742Z",
+            "minutes": 119.38068333333334
+          }
+        ]
+      },
+      "additionalRisk": "Local wall clock close-time filter alone does not prove Kraken last-row finality when a response straddles the hour boundary."
+    },
+    {
+      "id": "AT-20261112-04",
+      "name": "Preserve sanitized provider error classification",
+      "hypothesis": "Separate provider error codes from missing result to diagnose feed failures without changing trading decisions",
+      "status": "diagnostic_observation_complete_candidate_not_implemented",
+      "promoted": false,
+      "sources": [
+        "https://support.kraken.com/articles/360001491786-api-error-messages",
+        "https://github.com/benisprlh/atlas-trader/blob/c96272512e2c9123b60e1f0a6d1e1e9353c90c6a/lib/market.ts"
+      ],
+      "benefit": "Distinguish invalid request, throttling, unavailable service and malformed response",
+      "risk": "Sensitive payload leakage, incorrect retry amplification or stale-data acceptance",
+      "passCriteria": "Isolated replay: preserve allowlisted error category and receivedAt/HTTP status, zero secrets; fail closed with no synthetic prices; classify every documented fixture; unknown codes stay unknown. Before profitability claims use candidate01 chronological cost/risk protocol. No main deployment.",
+      "performed": "Read primary Kraken error documentation, inspect source condition and audit copied chronological events through current capture",
+      "result": {
+        "recordedAttempts24h": 24,
+        "recordedErrors24h": 4,
+        "observedFailureFraction": 0.16666666666666666,
+        "notAnUptimeEstimate": true,
+        "providerCodePresentForEveryError": false,
+        "rootCause": "unavailable: generic application message collapses provider error and absent result",
+        "sourceBranchVerified": true,
+        "chronologicalDiagnosticEvaluation": {
+          "calibrationThrough": "2026-11-11T01:28:35.258787+00:00",
+          "holdoutThrough": "2026-11-12T01:28:14.815937+00:00",
+          "genericErrorsWithoutProviderCode": 4,
+          "scope": "diagnostic audit only, no trade simulation or candidate profitability claim"
+        }
+      },
+      "rejectedInterpretations": [
+        "Four errors prove rate limiting",
+        "Flat equity proves safety",
+        "Heartbeat proves feed availability"
+      ],
+      "missing": [
+        "sanitized original upstream error codes and timestamps",
+        "isolated candidate implementation",
+        "arrival/decision/fill ledger for replay"
+      ]
+    }
+  ],
+  "allCandidatesEvaluatedThisRunLogged": true,
+  "existingScalperCandidate": {
+    "reference": "experiments/scalper-0.1.0.md",
+    "status": "not_promoted_no_new_profitability_experiment",
+    "regressionTestsPassed": 9,
+    "liveRuntimeAvailabilityNotVerified": true
+  },
+  "priorRejectedEvidenceRetained": "Five historical >90-minute cycle gaps remain. No backtest candidate has passed profitability gates.",
+  "sourcesCheckedWIB": "2026-11-12",
+  "studyDesign": "No historical return backtest was executed. Arithmetic, data integrity and static source diagnostics are not out-of-sample profitability evidence.",
+  "carriedForwardNotRetested": [
+    {
+      "id": "AT-20261111-03",
+      "name": "Explicit position and timeframe evidence for AI reviews",
+      "hypothesis": "Providing a dated virtual position, cash, cost and timeframe may reduce unsupported EXIT explanations while retaining the deterministic execution envelope. This is not a claim of more trades or higher profit.",
+      "status": "missing_context_confirmed_statically_semantic_and_profit_tests_not_run",
+      "promoted": false,
+      "performed": "Audited review call site at recorded main commit and compared latest copied review with paper ledger.",
+      "result": {
+        "existingEvidenceIds": [
+          "close",
+          "fast_sma",
+          "slow_sma",
+          "volatility",
+          "momentum"
+        ],
+        "explicitPositionAndTimeframe": false,
+        "latestReviewClaimsPositionUnknown": true,
+        "actualVirtualQuantity": 0,
+        "ruleExitCannotBeVetoed": true
+      },
+      "sources": [
+        "https://github.com/benisprlh/atlas-trader/blob/9a58bcd8c27f71bbfa0dd7f28031b3ab9385e5b0/lib/paper-service.ts#L10",
+        "https://github.com/benisprlh/atlas-trader/blob/9a58bcd8c27f71bbfa0dd7f28031b3ab9385e5b0/lib/agent-provider.ts#L108"
+      ],
+      "benefit": "Ground commentary in actual inventory and distinguish no-op EXIT from selling an open position.",
+      "risk": "More tokens, stale position snapshot, prompt drift, and unsupported confidence; context alone cannot create baseline entries.",
+      "passCriteria": "Isolated candidate only. Freeze context contract and fixtures before test; require accurate inventory/timeframe on all held-out review cases, zero fabricated facts, and unchanged action/risk constraints. Chronological train90/test30 >=3 folds on verified >=180-day data; only already-received data; fills after decision; cost stress as candidate01; at least30 closed OOS trades for profit judgment, positive median incremental netPnL and no DD>8% or exposure>15%. Retain all failed cases. No promotion to primary.",
+      "missing": [
+        "Candidate context implementation in an isolated branch/module",
+        "Archived historical review inputs with position/timeframe and receivedAt/decisionAt",
+        "Frozen model configuration and complete usage/billing ledger",
+        "Verified OHLCV and execution cost data for chronological OOS profit evaluation"
+      ]
+    }
+  ]
+}
