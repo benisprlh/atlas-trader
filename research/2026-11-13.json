@@ -1,0 +1,81 @@
+{
+  "dateWIB": "2026-11-13",
+  "sourceCommit": "e61db4bd7851fcff98a4f49f91e0b7cff40d5c2d",
+  "sourcesReadToday": [
+    "https://www.kraken.com/pro/fees",
+    "https://docs.kraken.com/api-reference/market-data/get-ohlc-data",
+    "https://support.kraken.com/articles/360047124832-downloadable-historical-ohlcvt-open-high-low-close-volume-trades-data"
+  ],
+  "candidates": [
+    {
+      "id": "AT-20261107-01",
+      "hypothesis": "Filter entry berdasarkan edge setelah biaya mengurangi turnover yang merugi.",
+      "benefit": "Menilai profit bersih, bukan jumlah trade.",
+      "risk": "Peluang terlewat; fill maker mungkin terlalu optimistis.",
+      "passCriteria": "ETH/USD 1h >=180 hari; rolling train90/test30 >=3 fold; warmup36; fill sesudah keputusan; >=30 closed trades OOS; median improvement net positif; net positif pada stress fee80bps+slippage25bps/sisi; DD<=8%, exposure<=15%; semua fold dilaporkan.",
+      "status": "Belum diuji profitabilitas; aritmetika biaya saja.",
+      "result": [
+        {
+          "feeBps": 10,
+          "slippageBps": 10,
+          "roundtripCostUsd": 6.0
+        },
+        {
+          "feeBps": 40,
+          "slippageBps": 10,
+          "roundtripCostUsd": 15.0
+        },
+        {
+          "feeBps": 80,
+          "slippageBps": 10,
+          "roundtripCostUsd": 27.0
+        },
+        {
+          "feeBps": 80,
+          "slippageBps": 25,
+          "roundtripCostUsd": 31.5
+        }
+      ],
+      "missing": "Dataset OHLCV terverifikasi >=180 hari, spread/fill/arrival ledger, tarif akun, API cost."
+    },
+    {
+      "id": "AT-20261107-02",
+      "hypothesis": "Replay dengan candle final dan waktu penerimaan eksplisit menghilangkan hasil optimistis akibat look-ahead/backfill.",
+      "benefit": "Memisahkan gap observasi dari kontinuitas mark.",
+      "risk": "Arsip OHLCVT tidak membuktikan waktu penerimaan historis; gap dapat berarti tidak ada trade.",
+      "passCriteria": "Semua input final dan diterima sebelum keputusan; fill sesudah keputusan; tanpa harga sintetis; holdout30 hari tanpa tuning, gate profit/risk kandidat01.",
+      "status": "Audit 12 checks lulus; replay OOS belum dijalankan.",
+      "result": {
+        "checks": {
+          "session_matches": true,
+          "config_matches": true,
+          "reviewed_configuration_matches_prior": true,
+          "owner_private_verified": true,
+          "hourly_marks_contiguous": true,
+          "prior_marks_unchanged": true,
+          "prior_marks_retained": true,
+          "equity_cash_flat_reconciliation": true,
+          "closed_trade_counter_matches_empty_history": true,
+          "no_drawdown_breach_observed": true,
+          "no_exposure_breach_observed": true,
+          "prior_events_unchanged_and_retained": true
+        },
+        "gap24hMinutes": 126.39148333333333,
+        "historicalDatasetSourceVerified": "Official downloadable archive through 2026-09-30, page updated 2026-11-02; not downloaded or checksum verified."
+      },
+      "missing": "Raw OHLC dengan receivedAt, manifest/checksum dataset, ledger keputusan dan spread."
+    }
+  ],
+  "carriedCandidates": [
+    {
+      "id": "AT-20261111-03",
+      "status": "Konteks posisi/timeframe AI belum diuji ulang; tidak dipromosikan."
+    },
+    {
+      "id": "AT-20261112-04",
+      "status": "1 error generik baru tanpa kode upstream; klaim penyebab rate-limit ditolak. Implementasi diagnostik belum dilakukan."
+    }
+  ],
+  "candidateProfitabilityTestsRun": false,
+  "promotion": false
+}
